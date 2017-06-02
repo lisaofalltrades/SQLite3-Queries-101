@@ -153,3 +153,90 @@ Results:
   ```sql
 5|Jane X. Miller|jane@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
 ```
+## DELETE
+
+Ex 1. Delete the challenge named "recursion-with-unicorns".
+  ```sql
+DELETE FROM challenges WHERE name = "recursion-with-unicorns";
+```
+Check for deleted record:
+  ```sql
+SELECT * FROM challenges;
+```
+Results:
+  ```sql
+1|rails-starter-app|2016-08-12 13:50:08|2016-08-12 13:50:08
+2|sinatra-vs-rails|2016-08-12 13:50:08|2016-08-12 13:50:08
+3|javascript-in-rails|2016-08-12 13:50:08|2016-08-12 13:50:08
+4|hashes-vs-arrays|2016-08-12 13:50:08|2016-08-12 13:50:08
+5|api-only-rails|2016-08-12 13:50:08|2016-08-12 13:50:08
+6|learning-angular|2016-08-12 13:50:08|2016-08-12 13:50:08
+7|list-comprehension-in-python|2016-08-12 13:50:08|2016-08-12 13:50:08
+8|unit-testing-with-rspec|2016-08-12 13:50:08|2016-08-12 13:50:08
+9|integrating-testing-with-capybara|2016-08-12 13:50:08|2016-08-12 13:50:08
+10|intro-to-active-record|2016-08-12 13:50:08|2016-08-12 13:50:08
+11|sql-joins|2016-08-12 13:50:08|2016-08-12 13:50:08
+12|jquery-ajax|2016-08-12 13:50:08|2016-08-12 13:50:08
+14|active-record-validations|2016-08-12 13:50:08|2016-08-12 13:50:08
+15|sudoku-group|2016-08-12 13:50:08|2016-08-12 13:50:08
+16|generators-in-python-and-javascript|2016-08-12 13:50:08|2016-08-12 13:50:08
+17|javascript-closures|2016-08-12 13:50:08|2016-08-12 13:50:08
+18|lambda-in-python|2016-08-12 13:50:08|2016-08-12 13:50:08
+19|flashcards-group|2016-08-12 13:50:08|2016-08-12 13:50:08
+20|react-native-hello-world|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
+
+Ex 2. Delete the user with the email address "jackie@outlook.com".
+  ```sql
+DELETE FROM users WHERE email = "jackie@outlook.com";
+```
+Check for deleted record:
+  ```sql
+SELECT * FROM users;
+```
+Results:
+  ```sql
+1|Dustin Wells|dustin@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+2|George Wilson|george@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+3|Gerald Woodard|gerald@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+4|Ray Locke|ray@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+5|Jane X. Miller|jane@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+7|Raymond Oakley|raymond@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+8|Floyd Belle|floyd@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+9|Robert Estrada|robert@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+10|Jason Parker|jason@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+11|Latoya Butler|latoya@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+12|Bobby Hernandez|bobby@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+13|Linda Davis|linda@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+14|Lisa Nguyen|lisapizza@gmail.com|2016-12-19 15:32:10|2016-12-19 15:32:10
+```
+
+Ex 3. Delete the submissions made by the user with id 6.
+  ```sql
+DELETE FROM submissions WHERE user_id = 6;
+```
+Check for deleted record:
+  ```sql
+SELECT * FROM submissions;
+```
+Results:
+  ```sql
+1|1|1|2016-08-12 13:50:08|2016-08-12 13:50:08
+2|2|1|2016-08-12 13:50:08|2016-08-12 13:50:08
+3|3|1|2016-08-12 13:50:08|2016-08-12 13:50:08
+4|3|2|2016-08-12 13:50:08|2016-08-12 13:50:08
+5|4|2|2016-08-12 13:50:08|2016-08-12 13:50:08
+6|5|2|2016-08-12 13:50:08|2016-08-12 13:50:08
+9|7|4|2016-08-12 13:50:08|2016-08-12 13:50:08
+10|8|4|2016-08-12 13:50:08|2016-08-12 13:50:08
+11|9|4|2016-08-12 13:50:08|2016-08-12 13:50:08
+12|10|1|2016-08-12 13:50:08|2016-08-12 13:50:08
+13|10|4|2016-08-12 13:50:08|2016-08-12 13:50:08
+14|1|2|2016-08-12 13:50:08|2016-08-12 13:50:08
+15|1|2|2016-08-12 13:50:08|2016-08-12 13:50:08
+16|2|5|2016-08-12 13:50:08|2016-08-12 13:50:08
+17|2|5|2016-08-12 13:50:08|2016-08-12 13:50:08
+18|3|6|2016-08-12 13:50:08|2016-08-12 13:50:08
+19|4|5|2016-08-12 13:50:08|2016-08-12 13:50:08
+20|5|7|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
