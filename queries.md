@@ -101,3 +101,12 @@ George Wilson
 George Wilson
 Ray Locke
 ```
+Ex 4. Show the names of all the challenges for which the user named "Ray Locke" made a submission.xx
+  ```sql
+SELECT * FROM challenges JOIN submissions ON challenges.id = submissions.challenge_id JOIN users ON submissions.user_id = users.id WHERE users.name = 'Ray Locke';
+```
+Results:
+  ```sql
+2|sinatra-vs-rails|2016-08-12 13:50:08|2016-08-12 13:50:08|5|4|2|2016-08-12 13:50:08|2016-08-12 13:50:08|4|Ray Locke|ray@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+5|api-only-rails|2016-08-12 13:50:08|2016-08-12 13:50:08|19|4|5|2016-08-12 13:50:08|2016-08-12 13:50:08|4|Ray Locke|ray@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
