@@ -32,14 +32,28 @@ Results:
 ```
 ## WHERE
 
-Ex 2. Show all the data for any submissions made for the challenge with id 1.
+Ex 1. Show all the data for any submissions made for the challenge with id 1.
   ```sql
 SELECT * FROM submissions WHERE challenge_id = 1;
 ```
-Results
+Results:
   ```sql
 1|1|1|2016-08-12 13:50:08|2016-08-12 13:50:08
 2|2|1|2016-08-12 13:50:08|2016-08-12 13:50:08
 3|3|1|2016-08-12 13:50:08|2016-08-12 13:50:08
 12|10|1|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
+Ex 2. Show the names and email addresses of any users with a "@gmail.com" email address.
+  ```sql
+SELECT name, email FROM users WHERE email LIKE "%@gmail.com%";
+```
+Results:
+  ```sql
+Dustin Wells|dustin@gmail.com
+Jane X. Miller|jane@gmail.com
+Raymond Oakley|raymond@gmail.com
+Floyd Belle|floyd@gmail.com
+Latoya Butler|latoya@gmail.com
+Linda Davis|linda@gmail.com
+Lisa Nguyen|lisapizza@gmail.com
 ```
