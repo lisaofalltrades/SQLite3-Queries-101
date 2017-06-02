@@ -110,3 +110,31 @@ Results:
 2|sinatra-vs-rails|2016-08-12 13:50:08|2016-08-12 13:50:08|5|4|2|2016-08-12 13:50:08|2016-08-12 13:50:08|4|Ray Locke|ray@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
 5|api-only-rails|2016-08-12 13:50:08|2016-08-12 13:50:08|19|4|5|2016-08-12 13:50:08|2016-08-12 13:50:08|4|Ray Locke|ray@yahoo.com|2016-08-12 13:50:08|2016-08-12 13:50:08
 ```
+## INSERT
+
+Ex 1. Add a new user.
+  ```sql
+INSERT into users (name, email, created_at, updated_at) VALUES ("Lisa Nguyen", "lisapizza@gmail.com", "2016-12-19 15:32:10", "2016-12-19 15:32:10");
+```
+Check new record:
+  ```sql
+SELECT * FROM users WHERE name = "Lisa Nguyen";
+```
+Results:
+  ```sql
+14|Lisa Nguyen|lisapizza@gmail.com|2016-12-19 15:32:10|2016-12-19 15:32:10
+Paste output here.
+```
+
+Ex 2. Add a new challenge.
+  ```sql
+INSERT INTO challenges (name, created_at, updated_at) VALUES ("word-search", "2016-12-19 15:32:10", "2016-12-19 15:32:10");
+```
+Check new record:
+  ```sql
+SELECT * FROM challenges WHERE name = "word-search";
+```
+Results:
+  ```sql
+21|word-search|2016-12-19 15:32:10|2016-12-19 15:32:10
+```
