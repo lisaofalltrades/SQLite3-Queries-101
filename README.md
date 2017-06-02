@@ -1,6 +1,16 @@
 # SQLite3-Queries-101
 ## Most Common Queries
 
+Below are the most common queries one should know when beginning to learn SQL. Before jumping into queries, it's important to understand the relationship between databases. This is especially vital for JOIN queries.
+
+![Schema](readme-assets/schema.png)
+
+Some things to note:
+- The user table only has access to challenges THROUGH submissions
+- Vice versa, the challenges table only has access to users THROUGH submissions
+- Therefore, submissions is JOIN table
+- Understanding relationships are important. In SQL and real life :P
+
 ### SELECT
 
 Ex 1. Get all the data for all the submissions.
