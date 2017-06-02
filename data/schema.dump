@@ -1,0 +1,86 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+
+CREATE TABLE challenges (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL UNIQUE,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL
+);
+
+INSERT INTO "challenges" VALUES(1,'rails-starter-app', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(2,'sinatra-vs-rails', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(3,'javascript-in-rails', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(4,'hashes-vs-arrays', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(5,'api-only-rails', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(6,'learning-angular', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(7,'list-comprehension-in-python', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(8,'unit-testing-with-rspec', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(9,'integrating-testing-with-capybara', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(10,'intro-to-active-record', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(11,'sql-joins', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(12,'jquery-ajax', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(13,'recursion-with-unicorns', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(14,'active-record-validations', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(15,'sudoku-group', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(16,'generators-in-python-and-javascript', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(17,'javascript-closures', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(18,'lambda-in-python', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(19,'flashcards-group', DATETIME('now'), DATETIME('now'));
+INSERT INTO "challenges" VALUES(20,'react-native-hello-world', DATETIME('now'), DATETIME('now'));
+
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL UNIQUE,
+  email VARCHAR NOT NULL UNIQUE,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL
+);
+
+INSERT INTO "users" VALUES(1,'Dustin Wells','dustin@gmail.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(2,'George Wilson','george@outlook.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(3,'Gerald Woodard','gerald@outlook.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(4,'Ray Locke','ray@yahoo.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(5,'Jane Miller','jane@gmail.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(6,'Jackie McNeil','jackie@outlook.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(7,'Raymond Oakley','raymond@gmail.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(8,'Floyd Belle','floyd@gmail.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(9,'Robert Estrada','robert@yahoo.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(10,'Jason Parker','jason@outlook.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(11,'Latoya Butler','latoya@gmail.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(12,'Bobby Hernandez','bobby@yahoo.com',DATETIME('now'),DATETIME('now'));
+INSERT INTO "users" VALUES(13,'Linda Davis','linda@gmail.com',DATETIME('now'),DATETIME('now'));
+
+
+CREATE TABLE submissions (
+  id INTEGER PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+  challenge_id INTEGER NOT NULL,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
+  FOREIGN KEY(user_id) REFERENCES user(id),
+  FOREIGN KEY(challenge_id) REFERENCES challenge(id)
+);
+
+INSERT INTO "submissions" VALUES(1,1,1,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(2,2,1,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(3,3,1,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(4,3,2,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(5,4,2,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(6,5,2,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(7,6,3,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(8,6,3,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(9,7,4,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(10,8,4,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(11,9,4,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(12,10,1,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(13,10,4,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(14,1,2,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(15,1,2,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(16,2,5,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(17,2,5,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(18,3,6,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(19,4,5,DATETIME('now'),DATETIME('now'));
+INSERT INTO "submissions" VALUES(20,5,7,DATETIME('now'),DATETIME('now'));
+COMMIT;
