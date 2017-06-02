@@ -71,3 +71,12 @@ Jane Miller|jane@gmail.com
 Dustin Wells|dustin@gmail.com
 Dustin Wells|dustin@gmail.com
 ```
+Ex 2. Show all the data for submissions made by the user named "Jason Parker".
+  ```sql
+SELECT * FROM submissions JOIN users ON users.id = submissions.user_id WHERE users.name = 'Jason Parker';
+```
+Results:
+  ```sql
+12|10|1|2016-08-12 13:50:08|2016-08-12 13:50:08|10|Jason Parker|jason@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+13|10|4|2016-08-12 13:50:08|2016-08-12 13:50:08|10|Jason Parker|jason@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
