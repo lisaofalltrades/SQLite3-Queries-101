@@ -138,3 +138,18 @@ Results:
   ```sql
 21|word-search|2016-12-19 15:32:10|2016-12-19 15:32:10
 ```
+## UPDATE
+
+Ex 1. Update the name of the user named "Jane Miller"; change it to "Jane X. Miller".
+
+  ```sql
+UPDATE users SET name = "Jane X. Miller"WHERE name = "Jane Miller";
+```
+Check updated record:
+  ```sql
+SELECT * FROM USERS WHERE name LIKE "%Jane%";
+```
+Results:
+  ```sql
+5|Jane X. Miller|jane@gmail.com|2016-08-12 13:50:08|2016-08-12 13:50:08
+```
