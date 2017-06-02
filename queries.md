@@ -57,3 +57,17 @@ Latoya Butler|latoya@gmail.com
 Linda Davis|linda@gmail.com
 Lisa Nguyen|lisapizza@gmail.com
 ```
+## JOIN
+
+Ex 1. Show the names and email addresses of any users who made a submission for the challenge named "sinatra-vs-rails".
+  ```sql
+SELECT users.name, users.email FROM users JOIN submissions ON users.id = submissions.user_id JOIN challenges ON challenge_id = challenges.id WHERE challenges.name LIKE '%sinatra-vs-rails%';
+```
+Results:
+  ```sql
+Gerald Woodard|gerald@outlook.com
+Ray Locke|ray@yahoo.com
+Jane Miller|jane@gmail.com
+Dustin Wells|dustin@gmail.com
+Dustin Wells|dustin@gmail.com
+```
