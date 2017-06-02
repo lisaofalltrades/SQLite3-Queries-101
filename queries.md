@@ -80,3 +80,24 @@ Results:
 12|10|1|2016-08-12 13:50:08|2016-08-12 13:50:08|10|Jason Parker|jason@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
 13|10|4|2016-08-12 13:50:08|2016-08-12 13:50:08|10|Jason Parker|jason@outlook.com|2016-08-12 13:50:08|2016-08-12 13:50:08
 ```
+Ex 3. Show the names of any users who made a submission to any challenge whose name includes "rails".
+  ```sql
+SELECT users.name FROM users JOIN submissions ON users.id = submissions.user_id JOIN challenges ON challenge_id = challenges.id WHERE challenges.name LIKE '%rails%';
+```
+Results:
+  ```sql
+Dustin Wells
+George Wilson
+Gerald Woodard
+Gerald Woodard
+Ray Locke
+Jane X. Miller
+Jackie McNeil
+Jackie McNeil
+Jason Parker
+Dustin Wells
+Dustin Wells
+George Wilson
+George Wilson
+Ray Locke
+```
